@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>入力画面</title>
+</head>
+<body>
+<p>社員IDを入力してください</p>
+
+<form action="./result.html" th:action="@{result}" method="get">
+    社員ID：<input type="text" name="id" value="" th:value="${param.id} ? ${param.id[0]} : ''">
+    <input type="submit" value="検索">
+</form>
+</body>
+</html>
